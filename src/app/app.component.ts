@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'app-root',
@@ -8,24 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my awsome Recipes';
 
-  fetchEdamamRecipies() {
-  const resourceURL =  'https://api.edamam.com/search&q&app_id&app_key=';
-
-  const appKey = process.env.APP_KEY;
-
-  const appId = process.env.APP_ID;
-
-  const edamamUrl = `${resourceURL}${appKey}${appId} `;
-
-  return fetch(edamamUrl);
 
 
-
-
-
-
-
-
-
-  }
 }

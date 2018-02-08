@@ -1,7 +1,12 @@
-{{recipe.name | uppercase }}
-<div><span>id: </span>{{recipe.id}}</div>
-<div>
-  <label>name:
-    <input [(ngModel)]="recipe.name" placeholder="name">
-  </label>
-</div>
+<ul>
+    <li *ngFor="let recipe of recipes">
+      {{recipe.name}}
+      <a routerLink="recipe/{{recipe.id}}">
+      <img [src]="recipe.image">
+      </a>
+    </li>
+
+  </ul>
+
+  <router-outlet></router-outlet>
+
