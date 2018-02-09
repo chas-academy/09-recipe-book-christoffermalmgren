@@ -1,11 +1,11 @@
 export class Recipe {
 
-  public id: number;
+  public id: string;
   public name: string;
   public ingredients: string[];
   public  image: string;
 
-constructor(id: number,  name: string, ingredients: string[], image: string) {
+constructor(id: string,  name: string, ingredients: string[], image: string) {
 
   this.id = id;
   this.name = name;

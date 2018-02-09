@@ -1,12 +1,21 @@
-<ul>
-    <li *ngFor="let recipe of recipes">
-      {{recipe.name}}
-      <a routerLink="recipe/{{recipe.id}}">
-      <img [src]="recipe.image">
-      </a>
-    </li>
+<div class="head">
+<input [(ngModel)]="query" (keyup)="onKey($event)" placeholder="Search">
 
-  </ul>
+<div class="wrapper">
 
-  <router-outlet></router-outlet>
+    <ng-container *ngFor="let recipe of recipes">
 
+      <div class="box-image">
+        <a routerLink="recipe/{{recipe.id}}">
+        <img [src]="recipe.image">
+        </a>
+      </div>
+
+      <div class="box-text">
+         {{recipe.name}}
+      </div>
+
+    </ng-container>
+
+</div>
+</div>

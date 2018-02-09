@@ -8,7 +8,4 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 })
 export class AppComponent {
   title = 'my awsome Recipes';
-
-
-
 }

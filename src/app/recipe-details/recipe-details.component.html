@@ -1,3 +1,7 @@
-<p>
-  recipe-details works!
-</p>
+<div *ngIf="recipe">
+
+<h1> {{recipe.ingredients}} </h1>
+
+<img [src]="recipe.image">
+
+</div>
