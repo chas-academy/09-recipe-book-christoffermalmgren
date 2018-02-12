@@ -1,7 +1,15 @@
-<div *ngIf="recipe">
 
-<h1> {{recipe.ingredients}} </h1>
+<h1 class="dish"> {{recipe.name}} : </h1>
 
-<img [src]="recipe.image">
+<div *ngIf="recipe" class="box">
 
+
+
+  <h1 class="ingr"> {{recipe.ingredients}} </h1>
+
+  <img [src]="recipe.image">
+
+</div>
+<div class="button">
+  <button><b>Save Recipe</b></button>
 </div>

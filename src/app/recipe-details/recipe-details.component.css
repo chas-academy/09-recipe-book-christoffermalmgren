@@ -1,0 +1,49 @@
+.ingr {
+
+  width: 45%;
+  float: right;
+  color: black;
+  font-size: 25px;
+  padding:  5px;
+  background-color: rgb(194, 86, 86);
+  opacity: 0.7;
+  margin-bottom: 7.5px;
+  height: 200px;
+
+}
+
+.box{
+  max-width: 50%;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.dish{
+  text-align: center;
+  margin-top: 50px;
+  color: bisque;
+}
+
+button {
+    background-color: bisque;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 70px;
+    opacity: 0.7;
+    font-size: 20px
+
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+

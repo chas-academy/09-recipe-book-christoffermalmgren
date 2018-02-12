@@ -2,4 +2,6 @@
 body{
   background-image: url('../recipe.jpg');
   background-size: cover;
+  font-family: 'Raleway', sans-serif;
+
 }
