@@ -7,5 +7,5 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my awsome Recipes';
+  title = 'my awesome Recipes';
 }
