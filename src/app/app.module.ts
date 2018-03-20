@@ -7,10 +7,14 @@ import { AppComponent } from './app.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
+import { SavedComponent } from './saved/saved.component';
+import { SavedService } from './saved/saved.service';
+import { Filtered } from './recipes/recipes.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: RecipesComponent },
-  { path: 'recipe/:id', component: RecipeDetailsComponent }
+  { path: 'recipe/:id', component: RecipeDetailsComponent },
+  { path: 'saved', component: SavedComponent }
   ];
 
 
@@ -18,7 +22,10 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     RecipesComponent,
-    RecipeDetailsComponent
+    RecipeDetailsComponent,
+    SavedComponent,
+    Filtered
+    
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     )],
-  providers: [],
+  providers: [SavedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

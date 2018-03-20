@@ -1,9 +1,17 @@
 <div class="head">
 <input [(ngModel)]="query" (keyup)="onKey($event)" placeholder="Search">
 </div>
-<div class="wrapper">
+<div>
+    <button (click)="filter('All')">All</button>
+    <button (click)="filter('Sugar-Conscious')">Sugar-Conscious</button>
+    <button (click)="filter('Vegetarian')">Vegetarian</button>
+    <button (click)="filter('Vegan')">Vegan</button>
 
-    <ng-container *ngFor="let recipe of recipes">
+</div>
+<div class="wrapper">
+    
+
+    <ng-container *ngFor="let recipe of recipes | filtered: filteredBy">
 
       <div class="box-image">
         <a routerLink="recipe/{{recipe.id}}">

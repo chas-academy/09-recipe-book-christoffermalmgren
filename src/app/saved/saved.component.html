@@ -1,0 +1,11 @@
+<div class="saved-recipes">
+  {{ savedRecipes.title }}
+
+  <ul>
+    <li *ngFor="let recipe of savedRecipes.recipes">{{ recipe.name }}
+        <a routerLink="/recipe/{{recipe.id}}">
+         <img [src]="recipe.image">
+        </a>
+    </li>
+  </ul>
+</div>  

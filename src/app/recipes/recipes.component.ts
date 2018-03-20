@@ -12,6 +12,7 @@ import { environment } from '../../environments/environment';
 export class RecipesComponent {
 
   recipes: Recipe[];
+  filteredBy: string = "All";
   query = '';
   constructor() { }
 
@@ -47,12 +48,17 @@ export class RecipesComponent {
             encodeURIComponent(recipe.recipe.uri),
             recipe.recipe.label,
             recipe.recipe.ingredientLines,
-            recipe.recipe.image
+            recipe.recipe.image,
+            recipe.recipe.healthLabels
           ));
         this.recipes = mappedRecipes;
       });
 
     }
 
+  }
+
+  filter(type: string) {
+    this.filteredBy = type;
   }
 }
